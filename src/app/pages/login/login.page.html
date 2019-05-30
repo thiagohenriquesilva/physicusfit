@@ -4,6 +4,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content ion-padding>
+
+  <form [formGroup]="formlogin" 
+    (ngSubmit)="loginUser(formlogin.value)" >
+
+    <ion-item>
+      <ion-label position="floating" >E-mail</ion-label>
+      <ion-input type="text" formControlName="email" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating" >Senha</ion-label>
+      <ion-input type="password" formControlName="password" ></ion-input>
+    </ion-item>
+
+    <ion-button type="submit" >Login</ion-button>
+</form>
+
+<a (click)="goToRegisterPage()" >Crie uma conta</a>
+
 
 </ion-content>

@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import * as firebase from 'firebase';
 
+firebase.initializeApp(environment.firebase);
 
 import {AuthenticationService} from './services/authentication.service';
 import { AppComponent } from './app.component';
@@ -23,10 +24,14 @@ import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule, AngularFireAuthModule,
+    ReactiveFormsModule  ],
   providers: [
     StatusBar,
     SplashScreen,
+    AuthenticationService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
