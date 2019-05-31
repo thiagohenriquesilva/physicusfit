@@ -11,7 +11,8 @@ const routes: Routes = [
   { path: 'anamnese', loadChildren: './pages/anamnese/anamnese.module#AnamnesePageModule' },
   { path: 'imc', loadChildren: './pages/imc/imc.module#ImcPageModule' },
   { path: 'medidas', loadChildren: './pages/medidas/medidas.module#MedidasPageModule' },
-  { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },
+  { path: 'sobre', loadChildren: './pages/sobre/sobre.module#SobrePageModule' },  { path: 'register', loadChildren: './pages/register/register.module#RegisterPageModule' },
+
 ];
 
 @NgModule({

@@ -3,7 +3,6 @@ export interface Physicus{
     nome: string,
     sexo: string,
     dtnasc: string,
-    email: string;
-    senha: string;
+    idAuthentication: string,
     obs: string
 }
