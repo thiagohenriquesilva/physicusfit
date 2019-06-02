@@ -6,21 +6,20 @@
 
 <ion-content class="ion-padding" >
 
-    <form [formGroup]="formregister" 
-      (ngSubmit)="register(formregister.value)" >
+  <form [formGroup]="formregister" 
+    (ngSubmit)="register(formregister.value)" >
   
-      <ion-item>
-        <ion-label position="floating" >E-mail</ion-label>
-        <ion-input type="text" formControlName="email" ></ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-label position="floating" >E-mail</ion-label>
+      <ion-input type="text" formControlName="email" ></ion-input>
+    </ion-item>
   
-      <ion-item>
-        <ion-label position="floating" >Senha</ion-label>
-        <ion-input type="password" formControlName="password" ></ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Senha</ion-label>
+      <ion-input type="password" formControlName="password" ></ion-input>
+    </ion-item>
   
-      <ion-button type="submit" >Registrar!</ion-button>
-    </form>
-  
-    <a (click)="goLoginPage()" >Login</a>
-  </ion-content>
+    <ion-button type="submit" >Registrar!</ion-button>
+  </form>  
+  <a (click)="goLoginPage()" >Login</a>
+</ion-content>

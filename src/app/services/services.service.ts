@@ -3,6 +3,8 @@ import {Physicus} from '../model/physicus';
 import { Observable } from 'rxjs';
 import { AngularFirestoreDocument, AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 
+import {map, take} from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +16,7 @@ export class ServicesService {
   constructor(private afs: AngularFirestore) {
     this.avaliadoCollection = this.afs.collection<Physicus>('dadoscadastrais');
 
-    this.avaliado = this.avaliadoCollection.snapshotChanges()
+    this.avaliados = this.avaliadoCollection.snapshotChanges()
     .pipe(
       map( actions =>{
         return actions.map( a => {

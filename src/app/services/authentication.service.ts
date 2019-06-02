@@ -12,7 +12,7 @@ export class AuthenticationService {
   constructor() { }
 
   registerUser(user){
-    return new Promise<any>( (resolve, reject) => {
+    return new Promise<any>( ( resolve, reject ) => {
       flogin.auth().createUserWithEmailAndPassword(user.email, user.password)
         .then(
           res => resolve(res),

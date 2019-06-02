@@ -13,7 +13,6 @@ export class RegisterPage implements OnInit {
 
   formregister: FormGroup;
 
-
   constructor(
     private router: Router,
     private authService: AuthenticationService,
@@ -23,15 +22,15 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() {
     this.formregister = this.formBuilder.group({
-      email: new FormControl('',Validators.required),
-      passwrod: new FormControl('',Validators.required)
+      email: new FormControl('', Validators.required),
+      passwrod: new FormControl('', Validators.required)
     });
   }
 
   register(user){
     console.log(user);
     this.authService.registerUser(user)
-      .then( res =>{
+      .then( res => {
         this.router.navigateByUrl('/');
         this.showToast('Usuario add');
       }, err => console.log(err) );
