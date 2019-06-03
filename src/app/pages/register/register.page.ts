@@ -23,7 +23,7 @@ export class RegisterPage implements OnInit {
   ngOnInit() {
     this.formregister = this.formBuilder.group({
       email: new FormControl('', Validators.required),
-      passwrod: new FormControl('', Validators.required)
+      password: new FormControl('', Validators.required)
     });
   }
 
