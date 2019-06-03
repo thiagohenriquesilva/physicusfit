@@ -12,11 +12,12 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
 
   formlogin: FormGroup;
+  x: string;
 
   constructor(
     private formBuilder: FormBuilder,
     private authservice: AuthenticationService,
-    private router: Router,
+    private router: Router,    
   ) { }
 
   ngOnInit() {

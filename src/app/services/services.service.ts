@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Physicus} from '../model/physicus';
 import { Observable } from 'rxjs';
-import { AngularFirestoreDocument, AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreDocument, AngularFirestoreCollection, AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 
 import {map, take} from 'rxjs/operators';
 
@@ -27,4 +27,13 @@ export class ServicesService {
       })
     )
    }
+
+  getCadastros(): Observable<Physicus[]> {
+    return this.avaliados
+  }
+
+  add( avaliado: Physicus): Promise<DocumentReference>{
+    return this.avaliadoCollection.add(avaliado)
+  }
+
 }

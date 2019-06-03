@@ -11,7 +11,11 @@ export class DashboardPage implements OnInit {
   
   constructor( 
     private service: AuthenticationService) {      
-      console.log(service.detailsUser);
+      let x = service.detailsUser()
+      console.log(x)
+
+      
+      
   }
   
   
