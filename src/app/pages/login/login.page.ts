@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
 
   formlogin: FormGroup;
-  x: string;
 
   constructor(
     private formBuilder: FormBuilder,
